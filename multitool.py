@@ -1,6 +1,7 @@
 from microbit import *
 import music
 import random
+import time
 
 compass.calibrate()
 calibval = compass.get_field_strength()
@@ -37,6 +38,9 @@ while True:
             display.show(0)
     elif pin_logo.is_touched() and button_b.is_pressed():
         compass.calibrate()
+    elif button_a.is_pressed() and pin_logo.is_touched():
+        if button_a.is_pressed() and button_b.is_pressed and pin_logo.is_touched():
+            display.show(round(time.ticks_ms()/1000))
     else:
         display.show(Image.HAPPY)
         speaker.off()
