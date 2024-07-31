@@ -34,6 +34,8 @@ while True:
             display.show(1)
         else:
             display.show(0)
+    elif pin_logo.is_touched() and button_b.is_pressed():
+        compass.calibrate()
     else:
         display.show(Image.HAPPY)
         speaker.off()
