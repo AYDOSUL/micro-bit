@@ -31,9 +31,9 @@ while True:
         display.show(rand)
     elif button_a.is_pressed() and button_b.is_pressed() == False:
         if calibval < compass.get_field_strength():
-            display.scroll(1)
+            display.show(1)
         else:
-            display.scroll(0)
+            display.show(0)
     else:
         display.show(Image.HAPPY)
         speaker.off()
