@@ -2,6 +2,7 @@ from microbit import *
 import music
 import random
 
+compass.calibrate()
 calibval = compass.get_field_strength()
 while True:
     if pin_logo.is_touched():
@@ -12,7 +13,7 @@ while True:
         speaker.on()
         music.pitch(440)
         display.show(Image.TRIANGLE)
-        sleep(2000)
+        sleep(5000)
         speaker.off()
     elif button_b.is_pressed() and button_a.is_pressed() == False:
         degree = compass.heading()
