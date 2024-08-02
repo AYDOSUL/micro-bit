@@ -10,7 +10,7 @@ while True:
     winval = 0
     display.show(Image.DUCK)
     sleep(random.randint(1000, 4000))
-    display.show(Image.GHOST)
+    display.show(Image.SMILE)
     winval = 1
     sleep(250)
     if button_a.is_pressed() and winval == 1:
@@ -22,7 +22,7 @@ while True:
         sleep(5000)
         ascore = bscore = 0
     elif ascore == 3:
-        display.scroll('A wins')
+        display.scroll('A wins!')
         sleep(5000)
         ascore = bscore = 0
     else:
